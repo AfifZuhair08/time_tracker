@@ -9,12 +9,12 @@ class SignInPage extends StatelessWidget {
         centerTitle: true,
         elevation: 5.0,
       ),
-      body: buildContent(),
+      body: _buildContent(),
     );
   }
 
-  //container for -> body: buildContent <-
-  Widget buildContent() {
+  //container for -> body: _buildContent <-
+  Widget _buildContent() {
     return Container(
       color: Colors.yellow,
       child: Column(
