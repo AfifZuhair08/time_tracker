@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_tracker/common_widgets/custom_raised_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
@@ -48,7 +49,9 @@ class SignInPage extends StatelessWidget {
             onPressed: (){
               print('button Google pressed');
             }
-          )
+          ),
+          SizedBox(height: 8.0),
+          CustomRaisedButton(),
         ],
       ),
     );
