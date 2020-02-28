@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:time_tracker/app/sign_in/sign_in_button.dart';
+import 'package:time_tracker/app/sign_in/social_sign_in_button.dart';
 import 'package:time_tracker/common_widgets/custom_raised_button.dart';
 
 class SignInPage extends StatelessWidget {
@@ -19,7 +20,7 @@ class SignInPage extends StatelessWidget {
   //container for -> body: _buildContent <-
   Widget _buildContent() {
     return Padding(
-      padding: EdgeInsets.all(16.0),//set all edge with same one value
+      padding: EdgeInsets.all(16.0), //set all edge with same one value
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -34,19 +35,21 @@ class SignInPage extends StatelessWidget {
           ),
           SizedBox(height: 48.0),
           //BUTTON Google
-          SignInButton(
+          SocialSignInButton(
+            assetName: 'assets/images/google-logo.png',
             text: 'Sign in with Google',
             textColor: Colors.black87,
             color: Colors.white,
-            onPressed: (){},
+            onPressed: () {},
           ),
           SizedBox(height: 8.0),
           //BUTTON FB
-          SignInButton(
+          SocialSignInButton(
+            assetName: 'assets/images/facebook-logo.png',
             text: 'Sign in with Facebook',
             textColor: Colors.white,
             color: Color(0xFF334D92),
-            onPressed: (){},
+            onPressed: () {},
           ),
           SizedBox(height: 8.0),
           //BUTTON EMAIL
@@ -54,7 +57,7 @@ class SignInPage extends StatelessWidget {
             text: 'Sign in with email',
             textColor: Colors.white,
             color: Colors.teal,
-            onPressed: (){},
+            onPressed: () {},
           ),
           SizedBox(height: 8.0),
           Text(
@@ -68,14 +71,10 @@ class SignInPage extends StatelessWidget {
             text: 'Guest',
             textColor: Colors.black,
             color: Colors.lime[300],
-            onPressed: (){},
+            onPressed: () {},
           ),
         ],
       ),
     );
   }
-
-
-
-
 }
