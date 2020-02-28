@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:time_tracker/app/sign_in/sign_in_button.dart';
 import 'package:time_tracker/common_widgets/custom_raised_button.dart';
 
 class SignInPage extends StatelessWidget {
@@ -31,27 +32,44 @@ class SignInPage extends StatelessWidget {
               fontWeight: FontWeight.w600,
             ),
           ),
-          SizedBox(height: 8.0),
-          RaisedButton(
-            child: Text(
-              'Sign in with Google',
-              style: TextStyle(
-                color: Colors.black45, 
-                fontSize: 15.0
-              ),
-            ),
+          SizedBox(height: 48.0),
+          //BUTTON Google
+          SignInButton(
+            text: 'Sign in with Google',
+            textColor: Colors.black87,
             color: Colors.white,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(16.0),
-              )
-            ),
-            onPressed: (){
-              print('button Google pressed');
-            }
+            onPressed: (){},
           ),
           SizedBox(height: 8.0),
-          CustomRaisedButton(),
+          //BUTTON FB
+          SignInButton(
+            text: 'Sign in with Facebook',
+            textColor: Colors.white,
+            color: Color(0xFF334D92),
+            onPressed: (){},
+          ),
+          SizedBox(height: 8.0),
+          //BUTTON EMAIL
+          SignInButton(
+            text: 'Sign in with email',
+            textColor: Colors.white,
+            color: Colors.teal,
+            onPressed: (){},
+          ),
+          SizedBox(height: 8.0),
+          Text(
+            'or',
+            style: TextStyle(fontSize: 14.0, color: Colors.black87),
+            textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 8.0),
+          //BUTTON ANON
+          SignInButton(
+            text: 'Guest',
+            textColor: Colors.black,
+            color: Colors.lime[300],
+            onPressed: (){},
+          ),
         ],
       ),
     );
